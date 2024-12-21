@@ -6,20 +6,21 @@ const BlogSchema = new mongoose.Schema({
         required: true
     },
     description: String,
-    image:{
+    image: {
         type: String,
         required: true
     },
-    author:{
+    author: {
         name: String,
         image: String
     },
     createdAt: {
-        type: Date,
-        default: Date.now
-    }
-  });
+    type: Date,
+    default: Date.now
+   }
+  
+});
 
-const Blog = mongoose.model('Blog',BlogSchema);
+const Blog = mongoose.model('Blog', BlogSchema);
 
 module.exports = Blog;
